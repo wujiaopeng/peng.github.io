@@ -19,7 +19,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/images/image-20220330194050670.png">
 <meta property="article:published_time" content="2022-03-30T03:46:14.000Z">
-<meta property="article:modified_time" content="2022-03-31T00:50:34.881Z">
+<meta property="article:modified_time" content="2022-06-02T07:32:34.921Z">
 <meta property="article:author" content="Peng">
 <meta property="article:tag" content="其他">
 <meta property="article:tag" content="elk">
@@ -259,7 +259,9 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p>工作中为了满足研发可视化查看测试环境日志，不用进入每一个服务器去查看日志文件的目的，准备采用ELK实现日志可视化（ElasticSearch+Kibana+Logstash）。本次安装的版本为elk-6.8.9</p>
+    <blockquote>
+<p>工作中为了满足研发可视化查看测试环境日志，不用进入每一个服务器去查看日志文件的目的，准备采用ELK实现日志可视化（ElasticSearch+Kibana+Logstash）。本次安装的版本为elk-6.8.9</p>
+</blockquote>
 <span id="more"></span>
 
 <ol>
@@ -301,12 +303,12 @@
 <ul>
 <li>解压后备份配置文件<code>config/kibana.yml</code>并修改</li>
 </ul>
-  <figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">server.port</span>: <span class="string">5601  #设置对外服务的端口，默认是5601</span></span><br><span class="line">   <span class="attr">server.host</span>: <span class="string">0.0.0.0 #配置Kibana的远程访问</span></span><br><span class="line">   <span class="attr">elasticsearch.hosts</span>: <span class="string">[&quot;http://ip:9200&quot;] #配置es访问地址</span></span><br><span class="line">   <span class="attr">i18n.locale</span>: <span class="string">&quot;zh-CN&quot; #汉化界面</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">server.port</span>: <span class="string">5601  #设置对外服务的端口，默认是5601</span></span><br><span class="line"> <span class="attr">server.host</span>: <span class="string">0.0.0.0 #配置Kibana的远程访问</span></span><br><span class="line"> <span class="attr">elasticsearch.hosts</span>: <span class="string">[&quot;http://ip:9200&quot;] #配置es访问地址</span></span><br><span class="line"> <span class="attr">i18n.locale</span>: <span class="string">&quot;zh-CN&quot; #汉化界面</span></span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>启动kibana</li>
 </ul>
-  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">nohup ./bin/kibana &gt;&gt; start.log 2&gt;&amp;1 &amp; #启动kibana</span><br><span class="line">   ps -ef | grep kibana # 查看进程</span><br><span class="line">   kill -9  pid  # 杀死进程</span><br></pre></td></tr></table></figure>
+  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">nohup ./bin/kibana &gt;&gt; start.log 2&gt;&amp;1 &amp; #启动kibana</span><br><span class="line"> ps -ef | grep kibana # 查看进程</span><br><span class="line"> kill -9  pid  # 杀死进程</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>测试kibana是否启动成功，<code>http://ip:5601</code></li>
@@ -326,7 +328,11 @@
 <ul>
 <li>启动命令</li>
 </ul>
-  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nohup ./bin/logstash -f config/logstash-file.conf &gt; /dev/null 2&gt;&amp;1 &amp;  #启动自定配置文件</span><br><span class="line">./bin/logstash -f ./logstash-file.conf --config.reload.automatic #启动并自动加载配置</span><br></pre></td></tr></table></figure></li>
+  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nohup ./bin/logstash -f config/logstash-file.conf &gt; /dev/null 2&gt;&amp;1 &amp;  #启动自定配置文件</span><br><span class="line">./bin/logstash -f ./logstash-file.conf --config.reload.automatic #启动并自动加载配置</span><br></pre></td></tr></table></figure>
+
+
+<hr>
+</li>
 </ol>
 
     
@@ -645,6 +651,18 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">nginx</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">集群</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">链路跟踪</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">其他</a>
               </li>
              
@@ -658,6 +676,34 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">数据库</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">naocs</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">中间件</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">seata</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">分布式事务</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Skywalking</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">限流</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Sentinel</a>
               </li>
             
             <div class="clearfix"></div>
