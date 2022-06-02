@@ -18,11 +18,11 @@
 <meta property="og:description" content="SkyWalking是一个国产开源框架。SkyWalking是分布式系统的应用程序性能监视工具，专为微服务、云原生架构和基于容器（Docker、K8s）架构而设计。它是一款优秀的APM（Application Performance Management）工具，包括了分布式追踪、性能分析、应用和服务依赖分析等。 整体架构包含如下三个组成部分： 1. 探针负责进行数据收集，包含了tracing和M">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-03-30T03:46:14.000Z">
-<meta property="article:modified_time" content="2022-06-02T07:14:53.330Z">
+<meta property="article:modified_time" content="2022-06-02T07:42:33.696Z">
 <meta property="article:author" content="Peng">
-<meta property="article:tag" content="链路跟踪">
 <meta property="article:tag" content="其他">
 <meta property="article:tag" content="Skywalking">
+<meta property="article:tag" content="链路追踪">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="个人学习笔记" type="application/atom+xml">
@@ -84,15 +84,21 @@
 			
 				<li><a href="/tags/%E9%9A%8F%E7%AC%94/" target="_blank">SpringCloud</a></li>
 			
+				<li><a href="/tags/springcloud%20alibaba" target="_blank">SpringCloud Alibaba</a></li>
+			
 				<li><a href="/tags/%E9%9A%8F%E7%AC%94/" target="_blank">MySQL/Oracle</a></li>
 			
 				<li><a href="/tags/redis/" target="_blank">Redis</a></li>
 			
 				<li><a href="/tags/elk" target="_blank">ELK</a></li>
 			
+				<li><a href="/tags/nginx" target="_blank">Nginx</a></li>
+			
 				<li><a href="/tags/%E9%9A%8F%E7%AC%94/" target="_blank">Linux</a></li>
 			
 				<li><a href="/tags/%E9%9A%8F%E7%AC%94/" target="_blank">Docker</a></li>
+			
+				<li><a href="/tags/%E9%93%BE%E8%B7%AF%E8%BF%BD%E8%B8%AA" target="_blank">链路追踪</a></li>
 			
 				<li><a href="/tags/%E9%9A%8F%E7%AC%94/" target="_blank">其他/随笔</a></li>
 			
@@ -164,6 +170,12 @@
 			
 				
 			
+				
+			
+				
+			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -176,25 +188,31 @@
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 10%"><a href="/">主页</a></li>
+					<li style="width: 7.6923076923076925%"><a href="/">主页</a></li>
 		        
-					<li style="width: 10%"><a href="/tags/%E9%9A%8F%E7%AC%94/">Java</a></li>
+					<li style="width: 7.6923076923076925%"><a href="/tags/%E9%9A%8F%E7%AC%94/">Java</a></li>
 		        
-					<li style="width: 10%"><a href="/tags/%E9%9A%8F%E7%AC%94/">Spring</a></li>
+					<li style="width: 7.6923076923076925%"><a href="/tags/%E9%9A%8F%E7%AC%94/">Spring</a></li>
 		        
-					<li style="width: 10%"><a href="/tags/%E9%9A%8F%E7%AC%94/">SpringCloud</a></li>
+					<li style="width: 7.6923076923076925%"><a href="/tags/%E9%9A%8F%E7%AC%94/">SpringCloud</a></li>
 		        
-					<li style="width: 10%"><a href="/tags/%E9%9A%8F%E7%AC%94/">MySQL/Oracle</a></li>
+					<li style="width: 7.6923076923076925%"><a href="/tags/springcloud%20alibaba">SpringCloud Alibaba</a></li>
 		        
-					<li style="width: 10%"><a href="/tags/redis/">Redis</a></li>
+					<li style="width: 7.6923076923076925%"><a href="/tags/%E9%9A%8F%E7%AC%94/">MySQL/Oracle</a></li>
 		        
-					<li style="width: 10%"><a href="/tags/elk">ELK</a></li>
+					<li style="width: 7.6923076923076925%"><a href="/tags/redis/">Redis</a></li>
 		        
-					<li style="width: 10%"><a href="/tags/%E9%9A%8F%E7%AC%94/">Linux</a></li>
+					<li style="width: 7.6923076923076925%"><a href="/tags/elk">ELK</a></li>
 		        
-					<li style="width: 10%"><a href="/tags/%E9%9A%8F%E7%AC%94/">Docker</a></li>
+					<li style="width: 7.6923076923076925%"><a href="/tags/nginx">Nginx</a></li>
 		        
-					<li style="width: 10%"><a href="/tags/%E9%9A%8F%E7%AC%94/">其他/随笔</a></li>
+					<li style="width: 7.6923076923076925%"><a href="/tags/%E9%9A%8F%E7%AC%94/">Linux</a></li>
+		        
+					<li style="width: 7.6923076923076925%"><a href="/tags/%E9%9A%8F%E7%AC%94/">Docker</a></li>
+		        
+					<li style="width: 7.6923076923076925%"><a href="/tags/%E9%93%BE%E8%B7%AF%E8%BF%BD%E8%B8%AA">链路追踪</a></li>
+		        
+					<li style="width: 7.6923076923076925%"><a href="/tags/%E9%9A%8F%E7%AC%94/">其他/随笔</a></li>
 		        
 				</ul>
 			</nav>
@@ -401,15 +419,15 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">链路跟踪</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">其他</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Skywalking</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">链路追踪</a>
         		</li>
       		
 		</ul>
@@ -657,10 +675,6 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">链路跟踪</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">其他</a>
               </li>
              
@@ -701,7 +715,15 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Sentinel</a>
+                <a href="javascript:void(0)" class="js-tag color5">springcloud alibaba</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">sentinel</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">链路追踪</a>
               </li>
             
             <div class="clearfix"></div>
